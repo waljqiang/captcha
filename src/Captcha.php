@@ -263,7 +263,7 @@ class Captcha{
     }
 
     /* 加密验证码 */
-    private function authcode($str){
+    public function authcode($str){
         $key = substr(md5($this->seKey), 5, 8);
         $str = substr(md5($str), 8, 10);
         return md5($key . $str);
